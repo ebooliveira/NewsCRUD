@@ -62,7 +62,7 @@ php artisan migrate
 5) Add NewsCRUD to your routes file:
 
 ```
-Route::group(['prefix' => config('backpack.base.route_prefix', 'admin'), 'middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function () {
+Route::group(['prefix' => config('backpack.base.route_prefix', 'admin'), 'middleware' => ['web', 'auth'], 'namespace' => 'App\Http\Controllers\Admin'], function () {
     // Backpack\NewsCRUD
     Route::crud('article', 'ArticleCrudController');
     Route::crud('category', 'CategoryCrudController');
